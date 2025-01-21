@@ -1,6 +1,7 @@
 const squares = document.querySelectorAll('.square')
 const timeLeft = document.querySelector('#time-left')
 const score = document.querySelector('#score')
+const resetButton = document.getElementById('reset-btn')
 
 let result = 0
 let hitPosition
@@ -16,6 +17,8 @@ function randomSquare() {
     randomPosition.classList.add('mole') 
     hitPosition = randomPosition.id 
 }
+
+resetButton.addEventListener('click',()=> location.reload())   
 
 
 function moveMole() {
