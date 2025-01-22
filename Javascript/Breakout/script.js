@@ -120,7 +120,10 @@ function checkCollisions() {
     ) {
         yDirection = -yDirection; 
     }
-
+    const reset = document.getElementById('reset')
+    reset.addEventListener('click',()=>{
+        location.reload()
+    })
     blocks.forEach((block, index) => {
         if (
             ballCurrentPosition[0] > block.bottomLeft[0] &&
@@ -141,10 +144,12 @@ function checkCollisions() {
     if (ballCurrentPosition[1] <= 0) {
         clearInterval(timerId);
         alert(`Game Over! Your score is ${score}.`);
+        location.reload()
     }
 
     if (blocks.length === 0) {
         clearInterval(timerId);
         alert(`You win! Your final score is ${score}.`);
+        location.reload()
     }
 }
