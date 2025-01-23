@@ -18,7 +18,7 @@
 .user {
     position: absolute;
     width: 100px;
-    height: 20px;
+    height: 5px;
     background-color: rgb(62, 243, 45);
     border: solid 1px black;
 }
